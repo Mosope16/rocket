@@ -25,7 +25,7 @@ client_socket, client_address = server.accept()
 client_socket.send(file.encode("utf-8"))
 
 # send file size
-client_socket.send(str(file_size).encode("utf-8"))
+client_socket.send("{:.3f}".format(file_size).encode("utf-8"))
 
 # progress bar
 progress = tqdm(total=file_size*1000000, desc="Sending", unit="B")

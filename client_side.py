@@ -7,7 +7,7 @@ client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 # connect socket to server on same IP an PORT Address
 # client.connect((socket.gethostbyname(socket.gethostname()), 419))
-client.connect(("localhost", 419))
+client.connect(("localhost", 419)) # 192.168.43.87
 
 # receive file name
 file_name  = client.recv(1024).decode("utf-8")
