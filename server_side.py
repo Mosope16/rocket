@@ -10,13 +10,15 @@ file_size = os.path.getsize(file) / 1000000
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 # bind the socket to an IP-Address and Port Address
-# server.bind((socket.gethostbyname(socket.gethostname()), 419))
-server.bind(("localhost", 419))
+server.bind(("localhost", 10565))
 
 # allow socket to "listen" for connections
 server.listen()
+print("|------------------------------------------------------------------------|")
+print("|--------------------------- ROCKET TRANSFER 1.0 ------------------------|")
+print("|------------------------------------------------------------------------|")
+print("\n")
 print("SERVER HAS STARTED...")
-
 
 # allow server to accept connections
 client_socket, client_address = server.accept()
@@ -44,7 +46,7 @@ with open(file, "rb") as f:
 
 progress.close()
 print("\n...CLOSING SERVER")
-
+print("\n|----------------- CREATED BY BAMILOSIN DANIEL - 9TH MARCH 2024 ------------|\n")
 server.close()
 client_socket.close()
 
